@@ -15,19 +15,19 @@ export const OpenAIStream = async (prompt: string, apiKey: string) => {
     },
     method: "POST",
     body: JSON.stringify({
-      model: OpenAIModel.DAVINCI_TURBO,
+      model: OpenAIModel.GPT_3_5_TURBO,
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that accurately answers queries using Paul Graham's essays. Use the text provided to form your answer, but avoid copying word-for-word from the essays. Try to use your own words when possible. Keep your answer under 5 sentences. Be accurate, helpful, concise, and clear."
+          content: "You are a helpful assistant that accurately answers queries using Unity3D project files. Use the text provided to form your answer, but avoid copying word-for-word from the scripts. Be accurate, helpful, concise, and provide clean code solutions."
         },
         {
           role: "user",
           content: prompt
         }
       ],
-      max_tokens: 150,
-      temperature: 0.0,
+      max_tokens: 4000,
+      temperature: 0.7,
       stream: true
     })
   });

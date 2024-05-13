@@ -21,7 +21,7 @@ Paul Graham GPT provides 2 things:
 
 ### Search
 
-Search was created with [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) (`text-embedding-ada-002`).
+Search was created with [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) (`text-embedding-3-small`).
 
 First, we loop over the essays and generate embeddings for each chunk of text.
 
